@@ -1,0 +1,7 @@
+{
+  "plugins": ["@prettier/plugin-php", "prettier-plugin-blade"],
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5"
+}
