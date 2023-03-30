@@ -192,6 +192,7 @@ return [
     // App\Providers\BroadcastServiceProvider::class,
     App\Providers\EventServiceProvider::class,
     App\Providers\RouteServiceProvider::class,
+    Darryldecode\Cart\CartServiceProvider::class,
   ],
 
   /*
@@ -210,4 +211,6 @@ return [
       'Image' => Intervention\Image\Facades\Image::class,
     ])
     ->toArray(),
+
+  'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
 ];

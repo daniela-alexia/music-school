@@ -23,10 +23,10 @@ $route = Route::current()->getName();
                     <li class="{{ ($route == 'home.about')? 'active' : '' }}"><a href="{{ route('home.about') }}">Despre noi</a></li>
 
                                             <li><a href="services-details.html">Servicii</a></li>
-                                            <li class="{{ ($route == 'home') }}"><a href="#">Courses</a>
+                                            <li class="{{ ($route == 'home') }}"><a href="{{ route('all.courses') }}">Courses</a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="portfolio.html">Courses</a></li>
-                                                    <li><a href="portfolio-details.html">Detalii Courses</a></li>
+                                                    <li><a href="{{ route('all.courses') }}">Courses</a></li>
+                                                    <li><a href="{{ route('all.courses') }}">Detalii Courses</a></li>
                                                 </ul>
                                             </li>
                                             <!-- <li class="menu-item-has-children"><a href="#">Blogul nostru</a>

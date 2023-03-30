@@ -60,6 +60,18 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-mail-send-line"></i>
+                                    <span>Instruments Page Setup</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{ route('all.instruments') }}">All Instruments</a></li>
+                                    <li><a href="{{ route('add.instruments') }}">Add Instruments</a></li>
+                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-profile-line"></i>
                                     <span>Footer Page Setup</span>
                                 </a>

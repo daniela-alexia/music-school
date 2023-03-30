@@ -33,6 +33,7 @@ $courses = App\Models\Courses::latest()->get();
         <span>{{$item->courses_name}}</span>
         <h4 class="title"><a href="{{ route('courses.details',$item->id)}}">{{$item->  courses_title}}</a></h4>
         <a href="{{ route('courses.details',$item->id)}}" class="link">Case Study</a>
+      
     </div>
     </div> 
     @endforeach

@@ -44,6 +44,7 @@ class CoursesController extends Controller
     Courses::insert([
       'courses_name' => $request->courses_name,
       'courses_description' => $request->courses_description,
+      'courses_price' => $request->courses_price,
       'courses_image' => $save_url,
       'created_at' => Carbon::now(),
     ]);
@@ -80,6 +81,7 @@ class CoursesController extends Controller
       Courses::findOrFail($courses_id)->update([
         'courses_name' => $request->courses_name,
         'courses_description' => $request->courses_description,
+        'courses_price' => $request->courses_price,
         'courses_image' => $save_url,
       ]);
       $notification = [
@@ -94,6 +96,7 @@ class CoursesController extends Controller
       Courses::findOrFail($courses_id)->update([
         'courses_name' => $request->courses_name,
         'courses_description' => $request->courses_description,
+        'courses_price' => $request->courses_price,
       ]);
       $notification = [
         'message' => 'Courses Updated without Image Successfully',

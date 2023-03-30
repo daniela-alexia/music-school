@@ -8,6 +8,7 @@ use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Home\CoursesController;
+use App\Http\Controllers\Home\InstrumentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,6 +102,33 @@ Route::controller(CoursesController::class)->group(function () {
   Route::get('/courses/details/{id}', 'CoursesDetails')->name(
     'courses.details'
   );
+});
+
+//Instruments All Route
+Route::controller(InstrumentsController::class)->group(function () {
+  Route::get('/all/instruments', 'AllInstruments')->name('all.instruments');
+  Route::get('/add/instruments', 'AddInstruments')->name('add.instruments');
+  Route::post('/store/instruments', 'StoreInstruments')->name(
+    'store.instruments'
+  );
+  Route::get('/edit/instruments/{id}', 'EditInstruments')->name(
+    'edit.instruments'
+  );
+  Route::post('/update/instruments', 'UpdateInstruments')->name(
+    'update.instruments'
+  );
+  Route::get('/delete/instruments/{id}', 'DeleteInstruments')->name(
+    'delete.instruments'
+  );
+});
+
+// Cart All Route
+Route::controller(CartController::class)->group(function () {
+  Route::get('cart', 'cartList')->name('cart.list');
+  Route::post('cart', 'addToCart')->name('cart.store');
+  Route::post('update-cart', 'updateCart')->name('cart.update');
+  Route::post('remove', 'removeCart')->name('cart.remove');
+  Route::post('clear', 'clearAllCart')->name('cart.clear');
 });
 
 Route::get('/dashboard', function () {

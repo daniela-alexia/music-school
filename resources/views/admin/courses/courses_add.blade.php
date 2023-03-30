@@ -49,6 +49,16 @@
             </div>
             <!-- end row -->
 
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">Courses Price</label>
+                <div class="col-sm-10">
+                    <input name="courses_name" class="form-control" type="text" id="example-text-input">
+                    @error('courses_price')
+                    <span class="text-danger"> {{ $message }} </span>
+                    @enderror
+                </div>
+            </div>
+
 
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Courses Image </label>

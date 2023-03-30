@@ -35,6 +35,8 @@
                             <div class="services__details__content">
                                 <!-- <h2 class="title">{{ $courses->courses_title }}</h2> -->
                                 <p> {!! $courses->courses_description !!} </p>
+                                <p> Pret: {!! $courses->courses_price !!} </p>
+                                
 
 
                             </div>
