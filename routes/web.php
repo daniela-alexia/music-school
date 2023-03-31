@@ -9,6 +9,7 @@ use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Home\CoursesController;
 use App\Http\Controllers\Home\InstrumentsController;
+use App\Http\Controllers\Home\TeachersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -129,6 +130,18 @@ Route::controller(CartController::class)->group(function () {
   Route::post('update-cart', 'updateCart')->name('cart.update');
   Route::post('remove', 'removeCart')->name('cart.remove');
   Route::post('clear', 'clearAllCart')->name('cart.clear');
+});
+
+// Teachers All Route
+Route::controller(TeachersController::class)->group(function () {
+  Route::get('/all/teachers', 'AllTeachers')->name('all.teachers');
+  Route::get('/add/teachers', 'AddTeachers')->name('add.teachers');
+  Route::post('/store/teachers', 'StoreTeachers')->name('store.teachers');
+  Route::get('/edit/teachers/{id}', 'EditTeachers')->name('edit.teachers');
+  Route::post('/update/teachers', 'UpdateTeachers')->name('update.teachers');
+  Route::get('/delete/teachers/{id}', 'DeleteTeachers')->name(
+    'delete.teachers'
+  );
 });
 
 Route::get('/dashboard', function () {
